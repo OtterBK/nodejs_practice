@@ -27,6 +27,12 @@ class User{
         }
         
     }
+
+    register(){
+        const newUserInfo = this.body;
+        const res = UserStorage.save(newUserInfo);
+        return res;
+    }
 }
 
 module.exports = User;
